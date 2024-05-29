@@ -38,7 +38,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Run Gradle Build and Tests
-        run: ./gradlew clean test -Dcucumber.options="--tag @Succesful"
+        run: ./gradlew clean test aggregate --stacktrace --info
 
       - name: Archive Serenity Test Results
         if: always()
