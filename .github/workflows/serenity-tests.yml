@@ -36,9 +36,12 @@ jobs:
 
       - name: Grant execute permission for Gradle Wrapper
         run: chmod +x ./gradlew
+        
+      - name: Build with Gradle
+        run: ./gradlew build
 
-      - name: Run Gradle Build and Tests
-        run: ./gradlew clean test aggregate --stacktrace --info
+      - name: Run Serenity tests
+        run: ./gradlew test aggregate --stacktrace --info
 
       - name: Archive Serenity Test Results
         if: always()
