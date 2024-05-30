@@ -44,8 +44,7 @@ jobs:
           sudo apt update
           sudo apt install microsoft-edge-dev
             
-      - name: Grant execute permission for Gradle Wrapper
-        run: chmod +x gradlew
+
         
       - name: Build with Gradle
         run: ./gradlew build
