@@ -35,6 +35,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
             
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y wget unzip
+            
       - name: Install Microsoft Edge Dev
         run: |
           sudo apt update
