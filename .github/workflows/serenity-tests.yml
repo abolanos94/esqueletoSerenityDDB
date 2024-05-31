@@ -44,7 +44,8 @@ jobs:
           sudo apt update
           sudo apt install microsoft-edge-dev
             
-
+      - name: Set executable permissions for gradlew
+        run: chmod +x gradlew
         
       - name: Build with Gradle
         run: ./gradlew build
